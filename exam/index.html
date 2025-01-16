@@ -10,6 +10,7 @@
 <body>
     <button id="settings-btn">设置</button>
     <button id="fullscreen-btn">全屏</button>
+    <button id="edit-message-btn">编辑消息</button>
     <div class="container">
         <h1 id="examName">
             考试安排
@@ -51,6 +52,15 @@
             <input type="number" id="zoom-input" step="0.1" min="0.5" max="2">
             <button id="save-settings-btn">确定</button>
             <button id="close-settings-btn">关闭</button>
+        </div>
+    </div>
+    <!-- Message Modal -->
+    <div id="message-modal">
+        <div id="message-modal-content">
+            <label for="message-input">消息内容:</label>
+            <input type="text" id="message-input" name="message-input" value="">
+            <button id="save-message-btn">保存</button>
+            <button id="close-message-btn">关闭</button>
         </div>
     </div>
     <script src="script.js"></script>

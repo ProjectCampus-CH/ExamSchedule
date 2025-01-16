@@ -16,13 +16,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const roomInput = document.getElementById("room-input");
     const roomElem = document.getElementById("room");
     const zoomInput = document.getElementById("zoom-input");
+    const editMessageBtn = document.getElementById("edit-message-btn");
+    const messageInput = document.getElementById("message-input");
+    const saveMessageBtn = document.getElementById("save-message-btn");
+    const messageModal = document.getElementById("message-modal");
+    const closeMessageBtn = document.getElementById("close-message-btn");
 
     let offsetTime = getCookie("offsetTime") || 0;
     let room = getCookie("room") || "";
     let zoomLevel = getCookie("zoomLevel") || 1;
+    let message = getCookie("message") || "";
 
     offsetTime = parseInt(offsetTime);
     roomElem.textContent = room;
+    messageElem.textContent = message;
 
     function fetchData() {
         return fetch('exam_config.json', { cache: "no-store" }) // 不保留缓存
@@ -168,6 +175,25 @@ document.addEventListener("DOMContentLoaded", () => {
         roomElem.textContent = room;
         document.body.style.zoom = zoomLevel;
         settingsModal.style.display = "none";
+    });
+
+    // Open message modal
+    editMessageBtn.addEventListener("click", () => {
+        messageInput.value = message;
+        messageModal.style.display = "block";
+    });
+
+    // Close message modal
+    closeMessageBtn.addEventListener("click", () => {
+        messageModal.style.display = "none";
+    });
+
+    // Save message
+    saveMessageBtn.addEventListener("click", () => {
+        message = messageInput.value;
+        setCookie("message", message, 3);
+        messageElem.textContent = message;
+        messageModal.style.display = "none";
     });
 
     document.body.style.zoom = zoomLevel;
