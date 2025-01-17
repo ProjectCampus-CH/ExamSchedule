@@ -6,7 +6,7 @@ ExamShowboard的轻量级实现
 
 ### 本地启动
 
-1. 填写或者用工具生成 `exam_config.json` 文件，示例如下：
+1. 填写或者用[ExamShowBoard编辑器](https://github.com/examaware/DSZExamShowBoardEditor)生成 `exam_config.json` 文件，示例如下：
 
     ```json
     {
@@ -26,6 +26,10 @@ ExamShowboard的轻量级实现
         ]
     }
     ```
+
+> [!TIP]
+>
+> 配置文件只要有上面内容就行了，有其他的内容（比如 `room` ）也不会有影响。
 
 2. 确保安装Python。然后执行以下命令启动本地服务器：
 
