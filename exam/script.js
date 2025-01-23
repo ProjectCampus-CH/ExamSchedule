@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
             examTimingElem.textContent = "";
             remainingTimeElem.textContent = "";
             statusElem.textContent = "状态: 空闲";
-            statusElem.style.color = "blue";
+            statusElem.style.color = "#3946AF";
         }
 
         // Update next exams table
