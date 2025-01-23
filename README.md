@@ -1,59 +1,16 @@
 # ExamSchedule
 
-ExamShowboard的轻量级实现
+网页版ExamShowboard
+![iis-10](https://github.com/user-attachments/assets/a667fc3b-4b9e-4882-9329-fc36786f1980)
 
-## 快速使用
-
-### 本地启动
-
-1. 填写或者用[ExamShowBoard编辑器](https://github.com/examaware/DSZExamShowBoardEditor)生成 `exam_config.json` 文件，示例如下：
-
-    ```json
-    {
-        "examName": "2023年期末考试",
-        "message": "请考生遵守考场纪律，诚信考试。",
-        "examInfos": [
-            {
-                "name": "数学",
-                "start": "2023-12-01T09:00:00",
-                "end": "2023-12-01T11:00:00"
-            },
-            {
-                "name": "英语",
-                "start": "2023-12-01T13:00:00",
-                "end": "2023-12-01T15:00:00"
-            }
-        ]
-    }
-    ```
-
-> [!TIP]
->
-> 配置文件只要有上面内容就行了，有其他的内容（比如 `room` ）也不会有影响。
-
-2. 确保安装Python。然后执行以下命令启动本地服务器：
-
-    ```bash
-    python3 -m http.server 8000
-    ```
-
-3. 打开浏览器，访问 `http://localhost:8000` 即可查看考试安排。
-
-### 在线部署
-
-1. 将项目代码推送到GitHub仓库。
-2. 在GitHub仓库中，进入 `Settings` -> `Pages`。
-3. 在 `Source` 部分选择 `main` 分支并保存。
-4. GitHub Pages 将会自动部署项目，稍后即可通过提供的URL访问。
-
-## 功能说明
+## 功能
 
 - 实时显示当前时间、当前考试科目、考试起止时间、剩余时间及考试状态。
 - 支持全屏显示。
 - 支持设置时间偏移和考场信息，并保存到浏览器Cookie中。
 - 支持临时编辑消息，并保存到浏览器Cookie中（3天后到期）。
 
-## 设置说明
+### 设置说明
 
 点击设置按钮可以打开设置窗口，进行以下配置：
 
@@ -63,19 +20,33 @@ ExamShowboard的轻量级实现
 
 配置完成后点击保存按钮，设置将会保存到浏览器的Cookie中，并立即生效。
 
-## 编辑消息
+### 编辑消息
 
 点击编辑消息按钮可以打开消息编辑窗口，进行以下操作：
 
 - **消息内容**：用于临时编辑显示的消息。
 
-编辑完成后点击保存按钮，消息将会保存到浏览器的Cookie中，并立即生效（3天后到期）。
+编辑完成后点击保存按钮，消息将会保存到浏览器的Cookie中，并立即生效（3天内有效）。
+
+## 软件截图
+
+### 主界面
+![main](https://github.com/user-attachments/assets/c41991d9-b169-4b7b-8de5-6192f34ec8c8)   
+
+#### 考试展板界面
+![exam](https://github.com/user-attachments/assets/0bcf81f7-956b-4bf5-9354-a282d168e972)   
+
+#### 电子钟表界面   
+![time](https://github.com/user-attachments/assets/79624458-c76b-4008-b010-754a7c971a60)
+
+## 如何部署？   
+ 您可以点击查看 [ExamShowboard网页端 部署文档](https://github.com/fhzit/ExamSchedule/wiki)了解详细的部署教程。   
 
 ## 开发说明
 
-- 正在 `main` 分支上提供稳定版本。
-- 正在 `dev` 分支上进行开发。
+- 正在 [`main`](https://github.com/ExamAware/ExamSchedule/commits/master) 分支上提供稳定版本。
+- 正在 [`dev`](https://github.com/ExamAware/ExamSchedule/commits/dev) 分支上进行开发。
 
 ## 贡献
 
-欢迎提交Issue和Pull Request来贡献代码。
+欢迎提交[Issue](https://github.com/ExamAware/ExamSchedule/issues)和[Pull Request](https://github.com/ExamAware/ExamSchedule/pulls)来贡献代码。
