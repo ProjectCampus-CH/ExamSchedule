@@ -2,7 +2,7 @@ body {
     font-family: 'HarmonyOS Sans SC Regular', 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('/background.jpg') no-repeat center center fixed;
+    background: url('../background.jpg') no-repeat center center fixed;
     background-size: cover;
     animation: fadeIn 1s;
     color: #e0e0e0;
